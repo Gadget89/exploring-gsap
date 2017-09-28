@@ -1,12 +1,17 @@
-import React, { Component } from 'react';
-import {TweenMax, Power2, TimelineLite} from "gsap";
+import React from 'react';
+import './Main.css';
+import {TweenMax} from "gsap";
+
 
 class HelloMessage extends React.Component {
  componentDidMount() {
-  TweenMax.to("#box", 1, {yPercent:100, ease:Power2.easeInOut, repeat:0, yoyo:true})
+  TweenMax.fromTo("#box", 5, {y:-50}, {y:100, yoyo:true});
  }
+
  render() {
-  return <div id="box">Hello {this.props.name}</div>;
+  return <div id="box" className="hello">Hello {this.props.name}</div>;
  }
 }
+
+
 export default HelloMessage;
