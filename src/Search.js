@@ -5,7 +5,7 @@ import {TweenMax} from "gsap";
 
 class HelloMessage extends React.Component {
  componentDidMount() {
-  TweenMax.fromTo("#box", 5, {y:-50}, {y:100, yoyo:true});
+  TweenMax.fromTo("#box", 5, {y:-100}, {y:100, yoyo:true});
  }
 
  render() {
