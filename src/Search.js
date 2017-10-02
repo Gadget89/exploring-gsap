@@ -34,6 +34,17 @@ const navItem = [
     title: "Check out my blog"
   }
 ]
+// Map through array and return a <li>
+const listItems = navItem.map((button) =>
+  <li
+    key={button.id}>
+    <a
+      title={button.title}
+      href={button.link}>
+      {button.name}
+    </a>
+  </li>
+)
 
 class HelloMessage extends React.Component {
  componentDidMount() {
@@ -41,13 +52,13 @@ class HelloMessage extends React.Component {
  }
 
  render() {
-  return <div id="box" className="hello">Hello {this.props.name}</div>;
-    <nav id=lg-screen>
+  return (
+    <nav>
       <ul>
-        <li id="box">li 1</li>
-        <li id="box">li 2</li>
+        <li id="box">{listItems}</li>
       </ul>
     </nav>
+  );
  }
 }
 
