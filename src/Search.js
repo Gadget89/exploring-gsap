@@ -35,8 +35,9 @@ const navItem = [
   }
 ]
 // Map through array and return a <li>
-const listItems = navItem.map((button) =>
+const navListItem = navItem.map((button) =>
   <li
+
     key={button.id}>
     <a
       title={button.title}
@@ -46,16 +47,16 @@ const listItems = navItem.map((button) =>
   </li>
 )
 
-class HelloMessage extends React.Component {
+class navContent extends React.Component {
  componentDidMount() {
-  TweenMax.fromTo("#box", 5, {y:-100}, {y:100, yoyo:true});
+  TweenMax.fromTo("#box", 1, {y:-25}, {y:20, yoyo:true});
  }
 
  render() {
   return (
     <nav>
-      <ul>
-        <li id="box">{listItems}</li>
+      <ul id="box">
+        {navListItem}
       </ul>
     </nav>
   );
@@ -63,4 +64,4 @@ class HelloMessage extends React.Component {
 }
 
 
-export default HelloMessage;
+export default navContent;
