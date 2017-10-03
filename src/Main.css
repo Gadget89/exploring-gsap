@@ -20,7 +20,9 @@ ul {
   margin: 0;
   padding: 0;
   padding-bottom: 16px;
+  position: fixed;
   text-align: center;
+  width: 100%;
 }
 li {
   display: inline;
@@ -49,4 +51,11 @@ nav {
 #root {
   margin: 0;
   height: 100%;
+}
+.navLogo {
+  left: 1%;
+  padding: 0.5% 1%;
+  position: fixed;
+  top: -2.5%;
+  width: 4%;
 }

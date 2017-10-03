@@ -1,5 +1,6 @@
 import React from 'react';
 import './Main.css';
+import Logo from './assets/new-logo.png';
 import {TweenMax} from "gsap";
 
 const navItem = [
@@ -49,13 +50,21 @@ const navListItem = navItem.map((button) =>
 
 class navContent extends React.Component {
  componentDidMount() {
-  TweenMax.fromTo("#box", 1, {y:-25}, {y:20, yoyo:true});
+  TweenMax.fromTo("#lg_screen_nav", 1, {y:-25}, {y:20, yoyo:true});
+  TweenMax.fromTo("#lg_screen_logo", 1, {y:-25}, {y:20, yoyo:true});
  }
 
  render() {
   return (
     <nav>
-      <ul id="box">
+      <img
+        alt=""
+        className="navLogo"
+        id="lg_screen_logo"
+        src={Logo}
+        title="Home">
+      </img>
+      <ul id="lg_screen_nav">
         {navListItem}
       </ul>
     </nav>
