@@ -37,33 +37,32 @@ li {
 li:hover {
   /*border-bottom: solid 2px #FFC107;*/
   border-bottom: 2px solid transparent;
-  border-image: linear-gradient(to right, purple 50%, red) 1 100%;
-  /*border-image: linear-gradient(to right, purple 50%, red 100%, orange 48%, yellow 63%, green 76%, blue) 1 100%;*/
+  border-image: linear-gradient(to right, lightblue, #000099) 1 100%;
   border-image-slice: 1;
   animation: moveOut .3s linear;
   -webkit-animation: moveOut .3s linear;
 }
 li:nth-child(2):hover {
   border-bottom: 2px solid transparent;
-  border-image: linear-gradient(to right, orange 5%, yellow) 1 100%;
+  border-image: linear-gradient(to right, purple, orange) 1 100%;
   border-image-slice: 1;
 }
 
 li:nth-child(3):hover {
   border-bottom: 2px solid transparent;
-  border-image: linear-gradient(to right, green 5%, blue) 1 100%;
+  border-image: linear-gradient(to right, yellow, green) 1 100%;
   border-image-slice: 1;
 }
 
 li:nth-child(4):hover {
   border-bottom: 2px solid transparent;
-  border-image: linear-gradient(to right, purple 5%, pink) 1 100%;
+  border-image: linear-gradient(to right, #e066ff, #3d004d) 1 100%;
   border-image-slice: 1;
 }
 
 li:nth-child(5):hover {
   border-bottom: 2px solid transparent;
-  border-image: linear-gradient(to right, pink 5%, teal) 1 100%;
+  border-image: linear-gradient(to right, teal, #00ffff) 1 100%;
   border-image-slice: 1;
 }
 
