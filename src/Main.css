@@ -35,10 +35,38 @@ li {
   text-transform: uppercase;
 }
 li:hover {
-  border-bottom: solid 2px #FFC107;
-  animation: moveOut .2s linear;
-  -webkit-animation: moveOut .2s linear;
+  /*border-bottom: solid 2px #FFC107;*/
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(to right, purple 50%, red) 1 100%;
+  /*border-image: linear-gradient(to right, purple 50%, red 100%, orange 48%, yellow 63%, green 76%, blue) 1 100%;*/
+  border-image-slice: 1;
+  animation: moveOut .3s linear;
+  -webkit-animation: moveOut .3s linear;
 }
+li:nth-child(2):hover {
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(to right, orange 5%, yellow) 1 100%;
+  border-image-slice: 1;
+}
+
+li:nth-child(3):hover {
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(to right, green 5%, blue) 1 100%;
+  border-image-slice: 1;
+}
+
+li:nth-child(4):hover {
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(to right, purple 5%, pink) 1 100%;
+  border-image-slice: 1;
+}
+
+li:nth-child(5):hover {
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(to right, pink 5%, teal) 1 100%;
+  border-image-slice: 1;
+}
+
 @-webkit-keyframes moveOut{
     from {padding-bottom: 16px;}
     to {padding-bottom: 12px;}
