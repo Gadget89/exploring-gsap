@@ -1,7 +1,7 @@
 import React from 'react';
 import './Main.css';
 import Logo from './assets/new-logo.png';
-import {TweenMax} from "gsap";
+import {TweenMax, TimelineMax} from "gsap";
 
 const navItem = [
   {
@@ -35,10 +35,10 @@ const navItem = [
     title: "Check out my blog"
   }
 ]
+
 // Map through array and return a <li>
 const navListItem = navItem.map((button) =>
   <li
-
     key={button.id}>
     <a
       title={button.title}
@@ -49,22 +49,24 @@ const navListItem = navItem.map((button) =>
 )
 
 class navContent extends React.Component {
- componentDidMount() {
-  TweenMax.fromTo("#lg_screen_nav", 1, {y:-25}, {y:20, yoyo:true});
-  TweenMax.fromTo("#lg_screen_logo", 1, {y:-25}, {y:20, yoyo:true});
+  componentDidMount() {
+    var navAnimation = new TimelineMax({delay:1});
+    var navLoaded = () => (
+      document.getElementById('lg_screen_nav').className = "pin-nav"
+    )
+    navAnimation.add(TweenMax.fromTo("#lg_screen_nav", 2, {y:-35}, {y:25, yoyo:true, onComplete: navLoaded}));
  }
 
  render() {
   return (
-    <nav>
+    <nav id="lg_screen_nav">
       <img
         alt=""
         className="navLogo"
-        id="lg_screen_logo"
         src={Logo}
         title="Home">
       </img>
-      <ul id="lg_screen_nav">
+      <ul>
         {navListItem}
       </ul>
     </nav>
